@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="AllTestsSuite">
+    <test name="AllTests">
+        <classes>
+            <class name="UnitTests.trigonometric.SinTest"></class>
+            <class name="UnitTests.trigonometric.TgTest"></class>
+            <class name="UnitTests.trigonometric.CosTest"></class>
+            <class name="UnitTests.trigonometric.CtgTest"></class>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="AllTestsSuite">
+    <test name="AllTests">
+        <classes>
+            <class name="UnitTests.arithmetic.SignNegativeTest"></class>
+            <class name="UnitTests.arithmetic.SignPositiveTest"></class>
+        </classes>
+    </test>
+</suite>
