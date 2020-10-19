@@ -1,7 +1,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
-<suite name="AllTestsSuite">
-    <test name="AllTests">
+<suite name="SumMultSuite">
+    <test name="SumMult">
         <classes>
             <class name="UnitTests.arithmetic.SummationTest"></class>
             <class name="UnitTests.arithmetic.MultiplicationTest"></class>

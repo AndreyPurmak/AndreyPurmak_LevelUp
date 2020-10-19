@@ -1,7 +1,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
-<suite name="AllTestsSuite">
-    <test name="AllTests">
+<suite name="SubDivSuite">
+    <test name="SubDiv">
         <classes>
             <class name="UnitTests.arithmetic.DivisionTest"></class>
             <class name="UnitTests.arithmetic.SubtractionTest"></class>
