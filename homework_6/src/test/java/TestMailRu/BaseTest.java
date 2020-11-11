@@ -25,6 +25,7 @@ public class BaseTest {
     public final String SUBJECT = "Mail";
     public final String SUBJECT_TEST = "Тест mail";
     public final String BODY = "Homework 6 Test Mail.ru";
+    public final String USER = "Andrey Purmak";
 
     public void login (String login, String password) {
         driver.get(URL);

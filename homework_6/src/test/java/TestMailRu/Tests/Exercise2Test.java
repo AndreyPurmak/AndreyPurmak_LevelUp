@@ -35,23 +35,23 @@ public class Exercise2Test extends BaseTest {
         /* Going to Sent folder and verify that letter is there  */
         WebElement sentFolder = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(text(),'Отправленные')]")));
         sentFolder.click();
-        soft.assertEquals(wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@class='llc__snippet'][1]"))).getText(), BODY);
+        soft.assertEquals(wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@title='testpurmakmail@mail.ru']"))).getText(), EMAIL);
 
         /* Going to Test folder and verify that letter is there  */
         WebElement testFolder = driver.findElement(By.xpath("//div[contains(text(),'Тест')]"));
         testFolder.click();
-        soft.assertEquals(wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@class='llc__snippet'][1]"))).getText(), BODY);
+        soft.assertEquals(wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@title='Andrey Purmak <testpurmakmail@mail.ru>']"))).getText(), USER);
 
         /* Open letter and verify content  */
         WebElement testMailBody = driver.findElement(By.xpath("//*[text()[contains(.,'" + BODY +"')]]"));
         testMailBody.click();
         String mailDestinationAddress = wait.until(ExpectedConditions.visibilityOfElementLocated
-                (By.xpath("//*[@class='letter__author']/span"))).getAttribute("title");
+                (By.xpath("//*[@class='letter-contact']"))).getText();
         String mailSubject = wait.until(ExpectedConditions.visibilityOfElementLocated
                 (By.xpath("//*[@class='thread__header']//h2"))).getText();
         String mailBody = wait.until(ExpectedConditions.visibilityOfElementLocated
                 (By.xpath("//*[contains(text(), 'Test Mail.ru')]"))).getText();
-        soft.assertEquals(mailDestinationAddress, EMAIL);
+        soft.assertEquals(mailDestinationAddress, USER);
         soft.assertEquals(mailSubject, SUBJECT_TEST);
         soft.assertEquals(mailBody, BODY);
 

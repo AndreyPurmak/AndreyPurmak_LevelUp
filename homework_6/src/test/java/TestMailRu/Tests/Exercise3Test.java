@@ -35,7 +35,7 @@ public class Exercise3Test extends BaseTest {
         /* Going to received folder and verify that sent letter is there */
         WebElement receivedFolder = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(text(),'Входящие')]")));
         receivedFolder.click();
-        soft.assertEquals(wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@class='llc__snippet'][1]"))).getText(), BODY);
+        soft.assertEquals(wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@title='Andrey Purmak <testpurmakmail@mail.ru>']"))).getText(), USER);
 
         /* Open letter and verify content */
         WebElement draftMailBody = driver.findElement(By.xpath("//*[text()[contains(., '" + BODY + "')]]"));

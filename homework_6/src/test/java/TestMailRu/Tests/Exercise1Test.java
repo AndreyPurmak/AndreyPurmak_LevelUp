@@ -40,7 +40,7 @@ public class Exercise1Test extends BaseTest {
         soft.assertTrue(wait.until(ExpectedConditions.titleIs("Черновики - Почта Mail.ru")));
 
         /* Verifying content */
-        WebElement openSavedLetter = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//*[@class='llc__container'])[1]")));
+        WebElement openSavedLetter = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@title='andreypurmak@gmail.com']")));
         openSavedLetter.click();
 
         String mailDestinationAddress = wait.until(ExpectedConditions.elementToBeClickable
