@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="API Tests GoRest">
+
+    <test name="Homework 8">
+        <classes>
+            <class name="API.UsersAPITest"></class>
+            <class name="API.PostsAPITests"></class>
+            <class name="API.CommentsAPITests"></class>
+        </classes>
+    </test>
+</suite>
