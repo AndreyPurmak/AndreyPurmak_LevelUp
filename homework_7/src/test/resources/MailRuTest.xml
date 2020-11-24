@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Mail.Ru Test">
+
+    <test name="Homework 6">
+        <classes>
+            <class name="TestMailRu.Tests.Exercise1Test"></class>
+            <class name="TestMailRu.Tests.Exercise2Test"></class>
+            <class name="TestMailRu.Tests.Exercise3Test"></class>
+        </classes>
+    </test>
+
+</suite>
